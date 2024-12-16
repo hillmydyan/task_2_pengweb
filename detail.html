@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detail Informasi Pendaftar</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+
+        .container {
+            max-width: 600px;
+            margin: 50px auto;
+            background: #fff;
+            padding: 20px;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            text-align: center;
+            color: #333;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        table th, table td {
+            text-align: left;
+            padding: 10px;
+            border: 1px solid #ddd;
+        }
+
+        table th {
+            background-color: #f2f2f2;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Detail Informasi</h1>
+        <table>
+            <tr>
+                <th>Field</th>
+                <th>Data</th>
+            </tr>
+            <tr>
+                <td>Nama Lengkap</td>
+                <td><script>document.write(new URLSearchParams(window.location.search).get('name'));</script></td>
+            </tr>
+            <tr>
+                <td>Email</td>
+                <td><script>document.write(new URLSearchParams(window.location.search).get('email'));</script></td>
+            </tr>
+            <tr>
+                <td>Usia</td>
+                <td><script>document.write(new URLSearchParams(window.location.search).get('age'));</script></td>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>
